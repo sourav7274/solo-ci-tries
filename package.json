@@ -16,7 +16,7 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "npm test",
-    "run" : "npm index"
+    "test": "npm test.js",
+    "run" : "npm index.js"
   }
 }
