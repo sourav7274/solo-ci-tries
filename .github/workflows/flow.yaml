@@ -12,6 +12,8 @@ jobs:
           
           - name: Setting up Node Env
             uses: actions/setup-node@v3
+            with:
+                node-version: 24
          
           - name: Installing Dependencies
             uses: npm install
