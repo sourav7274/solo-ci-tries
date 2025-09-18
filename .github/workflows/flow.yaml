@@ -11,7 +11,7 @@ jobs:
             uses: actions/Checkout@v5
           
           - name: Setting up Node Env
-            uses: acionssetup-node@v3
+            uses: acions/setup-node@v3
          
           - name: Installing Dependencies
             uses: npm install
