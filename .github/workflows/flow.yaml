@@ -1,0 +1,21 @@
+name: Ci Flow Check
+on:
+  push:
+    branches: [main]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checking out code
+            uses: actions/Checkout@v5
+          
+          - name: Setting up Node Env
+            uses: acionssetup-node@v3
+         
+          - name: Installing Dependencies
+            uses: npm install
+         
+          - name: Using Test Cases
+            uses: npm test
+
