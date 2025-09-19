@@ -28,7 +28,7 @@ jobs:
                password: ${{ secrets.DOCKER_PASSWORD  }}
           - name: Build Docker Image
             run: |
-                IMAGE_NAME=${{ secrets.DOCKER_USERNAME }}/c1-flow-check
+                IMAGE_NAME=${{ secrets.DOCKER_USERNAME }}/ci-flow-check
                 docker build -t $IMAGE_NAME:latest .
           - name: Push Docker Image to Hub
             run: |
