@@ -28,11 +28,11 @@ jobs:
                password: ${{ secrets.DOCKER_PASSWORD  }}
           - name: Build Docker Image
             run: |
-                BRANCH_NAME=${GITHUB_REF##*/}
+                BRANCH_NAME=$(echo ${GITHUB_REF##*/} | tr '/' '-')
                 IMAGE_NAME="${ secrets.DOCKER_USERNAME }/ci-flow-check/${BRANCH_NAME}"
                 docker build -t $IMAGE_NAME:latest .
           - name: Push Docker Image to Hub
             run: |
-                BRANCH_NAME=${GITHUB_REF##*/}
+                BRANCH_NAME=$(echo ${GITHUB_REF##*/} | tr '/' '-')
                 IMAGE_NAME="${ secrets.DOCKER_USERNAME }/ci-flow-check/${BRANCH_NAME}"
                 docker push $IMAGE_NAME:latest
