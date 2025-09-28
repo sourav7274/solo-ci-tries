@@ -17,6 +17,6 @@
   "main": "index.js",
   "scripts": {
     "test": "node test.js",
-    "run" : "node index.js"
+    "start" : "node index.js"
   }
 }
